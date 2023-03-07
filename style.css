@@ -1,0 +1,138 @@
+:root{
+    --color-principal: #fa2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: var(--color-principal);
+}
+
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    font-size: 2.5em;
+    margin: 0 auto;
+}
+header i{
+    background: #0f5;
+    margin-right: 5px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 3em;
+    cursor: pointer;
+    transition: all .6s;
+}
+header i:hover{
+    background: #090;
+    color: var(--color-principal);
+}
+
+.section-add-task{
+    display: none;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: calc(50% - 150px);
+    left: calc(50% - 200px);
+    box-shadow: 0 0 30px 10px #0003;
+}
+.section-add-task .form{
+    background: var(--color-principal);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.section-add-task .form input, .section-add-task .form button{
+    width: 95%;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+.section-add-task .form button{
+    cursor: pointer;
+}
+.section-add-task .form input:hover, .section-add-task .form button:hover{
+    background: var(--color-principal);
+    box-shadow: 0 0 30px 10px #0003;
+}
+
+.form .alert{
+    display: none;
+    position: absolute;
+    left: 10%;
+    color: rgb(255, 25, 0);
+    font-weight: 700;
+    font-size: 1.1em;
+}
+.alert-task{
+    top: 30%;
+}
+.alert-note{
+    top: 62%;
+}
+
+
+#container-lista{
+    height: 80vh;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0 0 30px 10px #0003;
+}
+
+#container-lista .num-task{
+    display: flex;
+    position: relative;
+    width: 95%;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    font-size: 1.8em;
+}
+#container-lista .num-task:hover{
+    cursor: pointer;
+    background: #0003;
+}
+.num-task div{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+hr{
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+} 
+
+.btn-update,.btn-delete{
+    background: #0003;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
